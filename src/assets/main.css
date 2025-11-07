@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* Color setting */
+    --color-background: white;
+    --color-background-dark: #333c4d;
+    --color-primary: #5F9EA0;
+    --color-primary-dark: #1f242e;
+    --color-secondary: var(--color-green-200);
+    --color-secondary-dark: var(--color-green-400);
+    --color-text-normal: black;
+    --color-text-dark: var(--color-gray-400);
+
+    /* Text Style */
+    --font-default: "Poppins", sans-serif;
+    --text-heading1: var(--text-4xl);
+    --text-heading2: var(--text-3xl);
+    --text-regular: var(--text-base);
+
+}
+
+    /* typography */
+
+    @layer components {
+        .typography{
+            h1 {
+                font-family: var(--font-default);
+                font-size: var(--text-heading1);
+                color: var(--text-text-normal);
+                font-weight: var(--font-weight-bold);
+            }
+
+            h2 {
+                font-family: var(--font-default);
+                font-size: var(--text-heading2);
+                color: var(--text-text-normal);
+                font-weight: var(--font-weigth-semibold);
+            }
+            p {
+                font-family: var(--font-default);
+                font-size: var(--text-regular);
+                color: var(--text-text-normal);
+                font-weight: var(--foont-weight-normal);
+            }
+
+        }
+    }
+
